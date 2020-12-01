@@ -23,5 +23,5 @@ public class AuthorDTO {
 
     private String url;
 
-    private List<Book> books;
+    private List<BookDTO> books;
 }

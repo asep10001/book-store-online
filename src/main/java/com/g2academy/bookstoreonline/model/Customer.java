@@ -22,6 +22,10 @@ import java.util.List;
 @AuditTable("customer_audit")
 public class Customer extends BaseEntity<String> implements Serializable {
 
+    public Long getCustomerId(){
+        return id;
+    }
+
     private static final long serialVersionUID = 1L;
 
     @Column(name = "email")

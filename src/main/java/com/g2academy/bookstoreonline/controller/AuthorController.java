@@ -56,7 +56,7 @@ public class AuthorController {
 
     @PostMapping("/authors")
     public ResponseEntity<AuthorDTO> saveAuthor(
-            @Valid @RequestBody AuthorDTO request, @RequestParam(value = "publisher_id") Long publisherId
+            @Valid @RequestBody Author request, @RequestParam(value = "publisher_id") Long publisherId
     ) {
         return authorService.saveAuthor(request, publisherId);
     }

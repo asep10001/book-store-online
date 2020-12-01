@@ -62,7 +62,7 @@ public class AuthorService {
         return this.getAll().apply(authorRepository.findAll());
     }
 
-    public ResponseEntity<AuthorDTO> saveAuthor(AuthorDTO request, Long publisherId
+    public ResponseEntity<AuthorDTO> saveAuthor(Author request, Long publisherId
     ) {
         Author aEntity = new Author();
         aEntity.setName(request.getName());
