@@ -24,6 +24,9 @@ public class Author extends BaseEntity<String> implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
+    public Long getAuthorId(){
+        return id;
+    }
     @Column(name = "name", nullable = false)
     private String name;
 

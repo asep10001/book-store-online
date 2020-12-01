@@ -26,6 +26,9 @@ public class Book extends BaseEntity<String> implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
+    public Long getBookId(){
+        return id;
+    }
     @Column(name = "isbn", length =20, unique = true, nullable = false)
     private String isbn;
 

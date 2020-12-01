@@ -16,6 +16,7 @@ public class BookDTO {
     private Long id;
     private String isbn;
 
+    private Long authorId;
     private String publisherName;
 
     private String authorName;
@@ -29,7 +30,7 @@ public class BookDTO {
     private Double price;
 
 
-    private Author author;
-    private List<WarehouseBook> warehouseBook;
-    private List<ShoppingBasketBook> shoppingBasketBooks;
+//    private Author author;
+//    private List<WarehouseBook> warehouseBook;
+//    private List<ShoppingBasketBook> shoppingBasketBooks;
 }
