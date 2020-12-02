@@ -23,6 +23,11 @@ import java.util.List;
 public class ShoppingBasket extends BaseEntity<String> implements Serializable {
     private static final long serialVersionUID = 1L;
 
+    public Long getShopBasId(){
+        return id;
+    }
+
+
     @Column(name = "user_email")
     private String email;
 

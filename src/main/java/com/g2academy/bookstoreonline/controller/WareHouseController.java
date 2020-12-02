@@ -53,21 +53,21 @@ public class WareHouseController {
     }
 
     @GetMapping("warehouse/searh/title")
-    public ResponseEntity<WareHouseDTO> findByBookTitle(@RequestParam(value = "book_title") String title){
+    public ResponseEntity<List<WareHouseDTO>> findByBookTitle(@RequestParam(value = "book_title") String title){
         return warehouseService.findByBookTitle(title);
     }
 
     @GetMapping("warehouse/searh/isbn")
-    public ResponseEntity<WareHouseDTO>findByBookIsbn(@RequestParam(value = "book_isbn") String isbn){
+    public ResponseEntity<List<WareHouseDTO>> findByBookIsbn(@RequestParam(value = "book_isbn") String isbn){
         return warehouseService.findByBookIsbn(isbn);
     }
 
     @GetMapping("warehouse/searh/author")
-    public ResponseEntity<WareHouseDTO>findByBookAuthor(@RequestParam(value = "author_name") String name){
+    public ResponseEntity<List<WareHouseDTO>> findByBookAuthor(@RequestParam(value = "author_name") String name){
         return warehouseService.findByBookAuthor(name);
     }
     @GetMapping("warehouse/searh/publisher")
-    public ResponseEntity<WareHouseDTO>findByBookPublisher(@RequestParam(value = "publisher_name") String name){
+    public ResponseEntity<List<WareHouseDTO>>findByBookPublisher(@RequestParam(value = "publisher_name") String name){
         return warehouseService.findByBookPublisher(name);
     }
 }

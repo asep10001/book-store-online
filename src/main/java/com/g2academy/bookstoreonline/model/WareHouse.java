@@ -24,6 +24,11 @@ public class WareHouse extends BaseEntity<String> implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
+    public Long getWareHouseId(){
+        return id;
+    }
+
+
     @Column(name = "phone", nullable = false)
     private String phone;
 

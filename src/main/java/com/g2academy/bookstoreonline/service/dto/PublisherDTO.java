@@ -16,5 +16,5 @@ public class PublisherDTO {
     private String address;
     private String phone;
     private String url;
-    private List<Book> books;
+//    private List<Book> books;
 }

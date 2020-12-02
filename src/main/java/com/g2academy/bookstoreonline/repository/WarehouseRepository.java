@@ -12,5 +12,7 @@ import java.util.List;
 
 @Repository
 public interface WarehouseRepository extends JpaRepository<WareHouse, Long> {
-    WareHouse findAllByWrBooksIn(List<WarehouseBook> book);
+    List<WareHouse> findAllByWrBooksIn(List<WarehouseBook> book);
+
+    List<WareHouse> findAllByWrBooksContaining(WarehouseBook allByWrBook);
 }

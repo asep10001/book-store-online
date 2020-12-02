@@ -14,7 +14,7 @@ public interface CustomerMapper {
     CustomerMapper INSTANCE = Mappers.getMapper(CustomerMapper.class);
 
     @Mapping(target = "id", expression = "java(entity.getCustomerId())")
-    @Mapping(target = "shoppingBaskets", ignore = true)
+//    @Mapping(target = "shoppingBaskets", ignore = true)
     CustomerDTO toDto(Customer entity);
     Customer toEntity(CustomerDTO dto);
 

@@ -68,7 +68,7 @@ public class CustomerService {
         return toDtos().apply(customerRepository.findAll());
     }
 
-    public ResponseEntity<CustomerDTO> saveCustomers(CustomerDTO request
+    public ResponseEntity<CustomerDTO> saveCustomers(Customer request
     ) {
 
         Customer cEntity = Customer.builder()

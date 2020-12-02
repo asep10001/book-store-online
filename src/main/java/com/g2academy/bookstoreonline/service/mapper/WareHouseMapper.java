@@ -3,6 +3,7 @@ package com.g2academy.bookstoreonline.service.mapper;
 import com.g2academy.bookstoreonline.model.WareHouse;
 import com.g2academy.bookstoreonline.service.dto.WareHouseDTO;
 import org.mapstruct.Mapper;
+import org.mapstruct.Mapping;
 import org.mapstruct.factory.Mappers;
 
 import java.util.List;
@@ -10,6 +11,8 @@ import java.util.List;
 @Mapper(uses = BookMapper.class)
 public interface WareHouseMapper {
     WareHouseMapper INSTANCE = Mappers.getMapper(WareHouseMapper.class);
+
+    @Mapping(target = "id", expression = "java(entity.getWareHouseId())")
 
     WareHouseDTO toDto(WareHouse entity);
     WareHouse toEntity(WareHouseDTO dto);

@@ -15,7 +15,9 @@ import java.util.List;
 @AllArgsConstructor
 public class ShoppingBasketDTO {
     private Long id;
-    private String email;
-    private Customer customer;
-    private List<ShoppingBasketBook> shoppingBasketBooks;
+    private Long customerId;
+    private String customerName;
+    private String customerEmail;
+//    private Customer customer;
+//    private List<ShoppingBasketBook> shoppingBasketBooks;
 }

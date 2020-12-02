@@ -18,5 +18,5 @@ public class WareHouseDTO {
     private Long id;
     private String phone;
     private String address;
-    private List<WarehouseBook> wrBooks = new ArrayList<>();
+//    private List<WarehouseBook> wrBooks = new ArrayList<>();
 }

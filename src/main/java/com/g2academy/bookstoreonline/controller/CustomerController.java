@@ -44,7 +44,7 @@ public class CustomerController {
 
     @PostMapping("/customers")
     public ResponseEntity<CustomerDTO> saveCustomer(
-            @Valid @RequestBody CustomerDTO request
+            @Valid @RequestBody Customer request
     ) {
         return customerService.saveCustomers(request);
     }

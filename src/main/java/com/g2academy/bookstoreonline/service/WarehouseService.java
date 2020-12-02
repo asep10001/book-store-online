@@ -91,32 +91,32 @@ public class WarehouseService {
         );
     }
 
-    public ResponseEntity<WareHouseDTO> findByBookTitle(String booktitle) {
-        return this.getAWareHouse().apply(
+    public ResponseEntity<List<WareHouseDTO>> findByBookTitle(String booktitle) {
+        return this.getAll().apply(
                 warehouseRepository.findAllByWrBooksIn(
                         warehouseBookRepository.findAllByWrBook(
-                                bookRepository.findBookByTitleContaining(booktitle))));
+                                bookRepository.findTopByTitleContaining(booktitle))));
     }
 
-    public ResponseEntity<WareHouseDTO> findByBookIsbn(String bookIsbn) {
-        return this.getAWareHouse().apply(
+    public ResponseEntity<List<WareHouseDTO>> findByBookIsbn(String bookIsbn) {
+        return this.getAll().apply(
                 warehouseRepository.findAllByWrBooksIn(
                         warehouseBookRepository.findAllByWrBook(
                                 bookRepository.findBookByIsbnContaining(bookIsbn))));
     }
 
-    public ResponseEntity<WareHouseDTO> findByBookAuthor(String name) {
-        return this.getAWareHouse().apply(
+    public ResponseEntity<List<WareHouseDTO>> findByBookAuthor(String name) {
+        return this.getAll().apply(
                 warehouseRepository.findAllByWrBooksIn(
                 warehouseBookRepository.findAllByWrBook(
-                        bookRepository.findBookByAuthorNameContaining(name))));
+                        bookRepository.findTopByAuthorNameContaining(name))));
     }
 
-    public ResponseEntity<WareHouseDTO> findByBookPublisher(String name) {
-        return this.getAWareHouse().apply(
+    public ResponseEntity<List<WareHouseDTO>> findByBookPublisher(String name) {
+        return this.getAll().apply(
                 warehouseRepository.findAllByWrBooksIn(
                         warehouseBookRepository.findAllByWrBook(
-                                bookRepository.findBookByPublisherNameContaining(name))));
+                                bookRepository.findTopByPublisherNameContaining(name))));
     }
 
     public ResponseEntity<WareHouseDTO> addBookToWarehouse(Long bookId, Long warehouseId) {

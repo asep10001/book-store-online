@@ -13,10 +13,8 @@ import java.util.List;
 @Builder
 @AllArgsConstructor
 public class WarehouseBookDTO {
-    private Long id;
-    private String warehouseAddress;
     private String bookISBN;
-    private Book wrBooks;
+    private String bookTitle;
     private WareHouse warehouse;
 //    private Integer count;
 }

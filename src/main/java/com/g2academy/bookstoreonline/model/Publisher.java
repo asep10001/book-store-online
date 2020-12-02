@@ -21,6 +21,10 @@ import java.util.List;
 @AuditTable("publisher_audit")
 public class Publisher extends BaseEntity<String> implements Serializable {
 
+    public Long getPublisherId(){
+        return id;
+    }
+
     private static final long serialVersionUID = 1L;
 
 

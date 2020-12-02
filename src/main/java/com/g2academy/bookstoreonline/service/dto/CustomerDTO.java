@@ -16,6 +16,6 @@ public class CustomerDTO {
     private String name;
     private String address;
     private String phone;
-    private List<ShoppingBasket> shoppingBaskets;
+//    private List<ShoppingBasket> shoppingBaskets;
 
 }
