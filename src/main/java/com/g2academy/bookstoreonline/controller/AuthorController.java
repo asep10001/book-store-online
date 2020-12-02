@@ -28,6 +28,10 @@ public class AuthorController {
     }
 
 
+    @GetMapping("/")
+    public String welcome(){
+        return "Welcome to the Online Book Store Application Created By Asep Agus Heri H";
+    }
     @GetMapping("/authors")
     public ResponseEntity<List<AuthorDTO>>  getAllAuthors() {
         return authorService.getAllAuthors();
